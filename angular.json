@@ -62,11 +62,13 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "officeApp:build"
+            "browserTarget": "officeApp:build",
+            "port":3000
           },
           "configurations": {
             "production": {
-              "browserTarget": "officeApp:build:production"
+              "browserTarget": "officeApp:build:production",
+              "port":3000
             }
           }
         },
