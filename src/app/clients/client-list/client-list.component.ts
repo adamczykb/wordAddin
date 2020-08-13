@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { Client } from "../client";
-import { ClientService } from "../clients.service";
+import { ClientService } from "../client.service";
 import { ActivatedRoute } from "@angular/router";
 import { switchMap } from "rxjs/operators";
 
