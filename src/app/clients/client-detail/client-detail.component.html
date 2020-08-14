@@ -1,0 +1,13 @@
+<h2>Clients</h2>
+<div *ngIf="client$ | async as client">
+    {{client.name}}
+    <div>
+        <label>Id: </label>{{ client.id }}
+    </div>
+    <div>
+        <label>Name: </label>{{ client.name }}
+    </div>
+    <p>
+        <button (click)="gotoClients(client)">Back</button>
+    </p>
+</div>

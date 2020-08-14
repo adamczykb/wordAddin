@@ -1,6 +1,6 @@
 <h2>CLIENTS</h2>
 <ul class="clients">
-    <li *ngFor="let clent of clients$ | async"
+    <li *ngFor="let client of clients$ | async"
         [class.selected]="client.id === selectedId">
         <a [routerLink]="['/client', client.id]">
             <span>{{ client.id }}</span>{{ client.name }}
