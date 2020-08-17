@@ -13,13 +13,12 @@ import { switchMap } from "rxjs/operators";
 })
 export class ClientListComponent implements OnInit {
     clients$: Observable<Client[]>;
-    selectedId: number;
 
     constructor(
         private service: ClientService,
         private route: ActivatedRoute
     ) {}
-    
+
     ngOnInit() {
         this.clients$ = this.service.getClients();
     }

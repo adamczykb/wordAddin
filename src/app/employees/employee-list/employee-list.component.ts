@@ -3,7 +3,6 @@ import { Observable } from "rxjs";
 import { Employee } from "../employee";
 import { EmployeeService } from "../employee.service";
 import { ActivatedRoute } from "@angular/router";
-import { switchMap } from "rxjs/operators";
 
 
 @Component({
@@ -13,7 +12,6 @@ import { switchMap } from "rxjs/operators";
 })
 export class EmployeeListComponent implements OnInit {
     employees$: Observable<Employee[]>;
-    selectedId: number;
 
     constructor(
         private service: EmployeeService,

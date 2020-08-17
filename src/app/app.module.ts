@@ -11,9 +11,12 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientService } from './clients/client.service';
-import { EmployeeDetailComponent } from './employees/employee-detail.component/employee-detail.component';
-import { EmployeeListComponent } from './employees/employee-list.component/employee-list.component';
+import { EmployeeDetailComponent } from './employees/employee-detail/employee-detail.component';
+import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { EmployeeService } from './employees/employee.service';
+import { IssueListComponent } from './issues/issue-list/issue-list.component';
+import { IssueDetailComponent } from './issues/issue-detail/issue-detail.component'; 
+import { IssueService } from './issues/issue.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { EmployeeService } from './employees/employee.service';
     ClientListComponent,
     ClientDetailComponent,
     EmployeeDetailComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    IssueListComponent,
+    IssueDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import { EmployeeService } from './employees/employee.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClientService,EmployeeService],
+  providers: [ClientService,EmployeeService,IssueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

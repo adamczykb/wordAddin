@@ -1,0 +1,28 @@
+<h2>Szczegóły sprawy:</h2>
+<div *ngIf="issue$ | async as issue">
+    <div>
+        <label>Id: </label>{{ issue.id }}
+    </div>
+    <div>
+        <label>Nazwa: </label>{{ issue.name }}
+    </div>
+    <div>
+        <label>Numer: </label>{{ issue.number }}
+    </div>
+    <div>
+        <label>Pracownik: </label><a [routerLink]="['/employee', issue.employeeDto.id]">{{ issue.employeeDto.name }}</a>
+    </div>
+    <div>
+        <label>Klienci: </label>
+        <ul>
+            <li *ngFor="let client of issue.clients">
+                <a [routerLink]="['/client', client.id]">
+                    {{ client.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>
+        <button (click)="gotoIssues(issue)">Back</button>
+    </p>
+</div>

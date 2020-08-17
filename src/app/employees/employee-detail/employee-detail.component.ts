@@ -26,7 +26,7 @@ export class EmployeeDetailComponent implements OnInit {
         );
     }
 
-    gotoemployees(employee: Employee) {
+    gotoEmployees(employee: Employee) {
         const employeeId = employee ? employee.id : null;
         this.router.navigate(['/employees']);
     }
