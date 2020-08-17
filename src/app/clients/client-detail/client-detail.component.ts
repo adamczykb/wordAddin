@@ -28,6 +28,6 @@ export class ClientDetailComponent implements OnInit {
 
     gotoClients(client: Client) {
         const clientId = client ? client.id : null;
-        this.router.navigate(['/clients', { id: clientId, foo: 'foo' }]);
+        this.router.navigate(['/clients']);
     }
 }

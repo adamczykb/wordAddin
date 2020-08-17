@@ -6,8 +6,8 @@ import { ClientDetailComponent } from './clients/client-detail/client-detail.com
 const routes: Routes = [];
 
 const clientsRoutes: Routes = [
-  { path: 'clients', component: ClientListComponent, data: { animation: 'clients' } },
-  { path: 'client/:id', component: ClientDetailComponent, data: { animation: 'client' } }
+  { path: 'clients', component: ClientListComponent },
+  { path: 'client/:id', component: ClientDetailComponent }
 ];
 
 

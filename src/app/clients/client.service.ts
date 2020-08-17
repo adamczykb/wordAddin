@@ -3,17 +3,20 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Client } from './client';
 import { CLIENTS } from './mock-clients';
-
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ClientService {
 
-    getClients(): Observable<Client[]> {
-        return of(CLIENTS);
-    }
+    constructor(
+        private http: HttpClient
+    ) {}
 
+    getClients(): Observable<Client[]> {
+        return this.http.get<Client[]>('http://localhost:8080/client/list');
+    }
 
     getClient(id: number | string) {
         return this.getClients().pipe(

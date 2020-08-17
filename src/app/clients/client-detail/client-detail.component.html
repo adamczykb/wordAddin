@@ -1,11 +1,10 @@
-<h2>Clients</h2>
+<h2>Dane klienta:</h2>
 <div *ngIf="client$ | async as client">
-    {{client.name}}
     <div>
         <label>Id: </label>{{ client.id }}
     </div>
     <div>
-        <label>Name: </label>{{ client.name }}
+        <label>Nazwa: </label>{{ client.name }}
     </div>
     <p>
         <button (click)="gotoClients(client)">Back</button>
