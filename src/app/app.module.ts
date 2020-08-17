@@ -11,13 +11,18 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientService } from './clients/client.service';
+import { EmployeeDetailComponent } from './employees/employee-detail.component/employee-detail.component';
+import { EmployeeListComponent } from './employees/employee-list.component/employee-list.component';
+import { EmployeeService } from './employees/employee.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent,
     ClientListComponent,
     ClientDetailComponent,
-    MenuComponent
+    EmployeeDetailComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,7 @@ import { ClientService } from './clients/client.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClientService],
+  providers: [ClientService,EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

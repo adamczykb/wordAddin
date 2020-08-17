@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Client } from './client';
-import { CLIENTS } from './mock-clients';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

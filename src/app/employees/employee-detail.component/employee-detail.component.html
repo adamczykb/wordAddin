@@ -1,0 +1,12 @@
+<h2>Dane pracownika:</h2>
+<div *ngIf="employee$ | async as employee">
+    <div>
+        <label>Id: </label>{{ employee.id }}
+    </div>
+    <div>
+        <label>Nazwa: </label>{{ employee.name }}
+    </div>
+    <p>
+        <button (click)="gotoemployees(employee)">Back</button>
+    </p>
+</div>
