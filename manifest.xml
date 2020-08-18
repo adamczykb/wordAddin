@@ -3,7 +3,7 @@
   <Id>a0ba6dfd-9ec6-45a9-9bb5-6a7a3a5ea403</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
+  <DefaultLocale>pl-PL</DefaultLocale>
   <DisplayName DefaultValue="officeApp"/>
   <Description DefaultValue="A template to get started."/>
   <IconUrl DefaultValue="http://localhost:3000/assets/icon-32.png"/>
@@ -73,12 +73,12 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="InfoBaza"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Word AddIn"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="GetStarted.Description" DefaultValue=""/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

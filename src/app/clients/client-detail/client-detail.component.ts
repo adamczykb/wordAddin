@@ -4,6 +4,7 @@ import { Client } from '../client';
 import { ClientService } from '../client.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { Issue } from 'src/app/issues/issue';
 
 @Component({
     selector: 'app-client-detail',
@@ -12,6 +13,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class ClientDetailComponent implements OnInit {
     client$: Observable<Client>;
+    issues$: Observable<Issue[]>;
 
     constructor(
         private service: ClientService,
@@ -23,6 +25,11 @@ export class ClientDetailComponent implements OnInit {
         this.client$ = this.route.paramMap.pipe(
             switchMap((params: ParamMap) =>
                 this.service.getClient(params.get('id')))
+        );
+
+        this.issues$ = this.route.paramMap.pipe(
+            switchMap((params: ParamMap) =>
+                this.service.getIssues(params.get('id')))
         );
     }
 

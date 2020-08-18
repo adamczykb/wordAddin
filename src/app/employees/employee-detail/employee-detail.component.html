@@ -6,7 +6,17 @@
     <div>
         <label>Nazwa: </label>{{ employee.name }}
     </div>
+    <div>
+        <label>Sprawy: </label>
+        <ul class="issues">
+            <li *ngFor="let issue of issues$|async">
+                <a [routerLink]="['/issue', issue.id]">
+                    {{ issue.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
     <p>
-        <button (click)="gotoEmployees(employee)">Back</button>
+        <button (click)="gotoEmployees(employee)">Wróć do listy pracowników</button>
     </p>
 </div>
