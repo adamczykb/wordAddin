@@ -42,18 +42,13 @@ export class AuthService {
         const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
         this.http.post('http://localhost:8080/login', { login: login.login, password: login.password }, { responseType: 'text' }).toPromise().then(
             function (data) { 
-                if(JSON.parse(data)[0]["Token"]!=""){
-                    localStorage.setItem("Token", (JSON.parse(data)[0]["Token"]));
-                    localStorage.setItem("Expire", (JSON.parse(data)[0]["Expire"]));
+                if(JSON.parse(data)["Token"]!=""){
+                    localStorage.setItem("Token", (JSON.parse(data)["Token"]));
+                    localStorage.setItem("Expire", (JSON.parse(data)["Expire"]));
                 }else{
                     document.getElementById("test").innerText="Wrong credentials";
                 }
-        }
-        ).catch((error: any) => {
-            if (error.status != 200) {
-                return Observable.throw(new Error(error.status));
-            }
-        });
-
+        })
+        
     }
 }
