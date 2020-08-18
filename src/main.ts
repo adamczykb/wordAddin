@@ -12,13 +12,8 @@ Office.initialize = function () {};
     
 (async () => {
   await Office.onReady();
-  console.log("Dddd");
   platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
-  Word.run(function(context){
-    context.document.body.insertParagraph("Cos","Start");
-    return context.sync();
-  })
 })();
   
 

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component'
+import { AuthService } from './auth.service';
 
 import { ClientListComponent } from './clients/client-list/client-list.component';
 import { ClientDetailComponent } from './clients/client-detail/client-detail.component';
@@ -27,7 +29,8 @@ import { IssueService } from './issues/issue.service';
     EmployeeDetailComponent,
     EmployeeListComponent,
     IssueListComponent,
-    IssueDetailComponent
+    IssueDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { IssueService } from './issues/issue.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClientService,EmployeeService,IssueService],
+  providers: [ClientService,EmployeeService,IssueService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
