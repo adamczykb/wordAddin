@@ -1,0 +1,22 @@
+<h2>Dane pracownika:</h2>
+<div *ngIf="employee$ | async as employee">
+    <div>
+        <label>Id: </label>{{ employee.id }}
+    </div>
+    <div>
+        <label>Nazwa: </label>{{ employee.name }}
+    </div>
+    <div>
+        <label>Sprawy: </label>
+        <ul class="issues">
+            <li *ngFor="let issue of issues$|async">
+                <a [routerLink]="['/issue', issue.id]">
+                    {{ issue.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>
+        <button (click)="gotoEmployees(employee)">Wróć do listy pracowników</button>
+    </p>
+</div>

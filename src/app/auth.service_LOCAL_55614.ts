@@ -48,13 +48,7 @@ export class AuthService {
                 }else{
                     document.getElementById("test").innerText="Wrong credentials";
                 }
-<<<<<<< HEAD
         })
         
-=======
-        }
-        )
-
->>>>>>> 19f7807bbe995be923df8c94629dc7de47e72f90
     }
 }

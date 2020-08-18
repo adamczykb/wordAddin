@@ -1,0 +1,8 @@
+<h2>Sprawy</h2>
+<ul class="issues">
+    <li *ngFor="let issue of issues$|async">
+        <a [routerLink]="['/issue', issue.id]">
+            {{ issue.name }}
+        </a>
+    </li>
+</ul>
