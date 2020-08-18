@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Client } from './client';
 import { HttpClient } from '@angular/common/http';
+import { Issue } from '../issues/issue';
 
 @Injectable({
     providedIn: 'root',
@@ -17,9 +18,11 @@ export class ClientService {
         return this.http.get<Client[]>('http://localhost:8080/client/list');
     }
 
+    getIssues(id: number | string): Observable<Issue[]> {
+        return this.http.get<Issue[]>('http://localhost:8080/issue/list/client/' + id)
+    }
+
     getClient(id: number | string) {
-        return this.getClients().pipe(
-            map((clients: Client[]) => clients.find(client => client.id === +id))
-        )
+        return this.http.get<Client>('http://localhost:8080/client/get/' + id);
     }
 }
